@@ -28,6 +28,7 @@ public class MainProgram {
         else {
         	if(studentID == 1810954) {
             	while (true) {
+            		System.out.println("[Student ID: "+studentID+"]");
             		System.out.println("1. Calculate the maximum of three");
                     System.out.println("2. Calculate the minimum of three");
                     System.out.println("3. Exit");
