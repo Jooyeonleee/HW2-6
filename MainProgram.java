@@ -79,11 +79,8 @@ public class MainProgram {
 					System.out.print("Enter menu number: ");
 				}
 			}
-			sc.close();
 			
 		}
-
-        	System.out.println("To be developed...\n");
         }
     }
     
