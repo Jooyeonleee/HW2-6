@@ -77,7 +77,51 @@ public class MainProgram {
 				}
 
 			}
+			
+			else if (studentID == 1811141){
+				System.out.println("[Student ID: 1811141]");
+				System.out.println("1. Factorial");
+				System.out.println("2. Absolute");
+
+				System.out.print("Enter menu number: ");
+				Scanner sc = new Scanner(System.in);
+				
+				int menu = sc.nextInt();
+				while( true ){
+					if( menu == 1){
+						int num;
+						int result;
+
+						System.out.print("Enter a positive integer: ");
+						num = sc.nextInt();
+						
+						result = nam_fact(num);
+						System.out.println("Result of Factorial Function: " + result);
+
+						break;
+
+					}
+					else if ( menu == 2) {
+						double num;
+						double result;
+						
+						System.out.print("Enter a real number: ");
+						sc.hasNextLine();
+						num = sc.nextDouble();
+						
+						result = nam_abs(num);
+						System.out.println("Result of Absolute Function: " + result);
+						
+						break;
+					}
+					else{
+						System.out.print("Wrong number! Enter menu number again:");
+						menu = sc.nextInt();
+					}
+				}
+			}
 		}
+		
 	}
 
 	public int maxOfThree(int a, int b, int c) {
@@ -114,5 +158,25 @@ public class MainProgram {
 		if (a < 0)
 			return a * (-1);
 		return a;
+	}
+	
+	public int nam_fact( int n){
+		int i;
+		int fac = 1;
+		if( n == 0 || n == 1)
+			return fac;
+		else {
+			for( i = 1; i < n+1 ; i++){
+				fac = fac * i;
+			}
+		}
+		return fac;
+	}
+
+	public double nam_abs(double a){
+		if (a >= 0)
+			return a;
+		else
+			return (-1)*a;
 	}
 }
