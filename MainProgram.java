@@ -120,6 +120,40 @@ public class MainProgram {
 					}
 				}
 			}
+			
+			
+			else if (studentID == 1811258) {
+				System.out.println("[Student ID: 1811258]");
+				System.out.println("1. Calculate the absolute value");
+				System.out.println("2. Calculate the maximum value");
+
+				Scanner scan = new Scanner(System.in);
+				System.out.print("Enter menu number : ");
+
+				while (true) {
+					int menuNum = scan.nextInt();
+					
+					if (menuNum == 1) {
+						System.out.print("Input one integer: ");
+						int num = scan.nextInt();
+						int result = makeAbs(num);
+						
+						System.out.println("The absolute value is " + result);
+						break;
+					} 
+					else if (menuNum == 2) {
+						System.out.print("Input two integer: ");
+						int num1 = scan.nextInt();
+						int num2 = scan.nextInt();
+						int result = makeMax(num1, num2);
+						
+						System.out.println("The maximum value is " + result);
+						break;
+					} 
+					else 
+						System.out.print("Enter correct menu number: ");
+				}
+			}
 		}
 		
 	}
@@ -178,5 +212,19 @@ public class MainProgram {
 			return a;
 		else
 			return (-1)*a;
+	}
+	
+	public int makeAbs(int a) {
+		if (a >= 0)
+			return a;
+		else 
+			return a * (-1);
+	}
+	
+	public int makeMax(int a, int b) {
+		if (a >= b)
+			return a;
+		else
+			return b;
 	}
 }
