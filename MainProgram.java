@@ -155,55 +155,51 @@ public class MainProgram {
 				}
 			}
 			
-		    else if(studentID == 1811494) {
-		    	System.out.println("[Student ID: 1811494]");
-	            System.out.println("1. Calculate the Factorial");
-	            System.out.println("2. Calculate the minimum value");
-	                     
-	            Scanner sc = new Scanner(System.in);
-	                     
-	            while(true) {
-	            	System.out.print("Enter menu number : ");
-	                int menuNum = sc.nextInt();
-	                        
-	                if(menuNum == 1) {
-	                	System.out.print("Please enter an integer number : ");
-	                    int number = sc.nextInt();
-	                    int result = factorial(number);
-	                    System.out.println("The factorial result value is "+result+"\n");
-	                    break;
-	                }
-	                else if(menuNum == 2) {
-	                	System.out.print("Please enter an integer number 1 : ");
-	                    int number = sc.nextInt();
-	                    System.out.print("Please enter an integer number 2 : ");
-	                    int number2 = sc.nextInt();
-	                    int result = minNum(number, number2);
-	                    System.out.println("The minimum result value is "+result+"\n");
-	                    break;
-	                }
-	                else {
-	                	System.out.println("You have entered an invalid number. Please try again.");
-	                }
-	            }
-	        }
+			else if(studentID == 1811494) {
+				System.out.println("[Student ID: 1811494]");
+				System.out.println("1. Calculate the Factorial");
+				System.out.println("2. Calculate the minimum value");
+				
+				Scanner sc = new Scanner(System.in);
+				
+				while(true) {
+					System.out.print("Enter menu number : ");
+					int menuNum = sc.nextInt();
+					
+					if(menuNum == 1) {
+						System.out.print("Please enter an integer number : ");
+						int number = sc.nextInt();
+						int result = factorial(number);
+						System.out.println("The factorial result value is "+result+"\n");
+						break;
+					} else if(menuNum == 2) {
+						System.out.print("Please enter an integer number 1 : ");
+						int number = sc.nextInt();
+						System.out.print("Please enter an integer number 2 : ");
+						int number2 = sc.nextInt();
+						int result = minNum(number, number2); 
+						System.out.println("The minimum result value is "+result+"\n");
+						break;
+					} else {
+						System.out.println("You have entered an invalid number. Please try again.");
+					}
+				}
+			}
 			
 		}
 		
 	}
 	
-	   
 	public int minNum(int number, int number2) {
 		int min = number;
-	    if(number > number2) min = number2;
-	    return min;
+		if(number > number2) min = number2;
+		return min;
 	}
-
+	
 	public int factorial(int number) {
 		if(number <= 1) {
 			return number;
-		}
-		else {
+		} else {
 			return factorial(number-1)*number;
 		}
 	}
