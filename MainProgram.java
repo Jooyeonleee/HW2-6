@@ -228,14 +228,14 @@ public class MainProgram {
 		return minNum;
 	}
 
-	public int calculateMax(int a, int b) {
+	public static int calculateMax(int a, int b) {
 		if (a > b)
 			return a;
 		else
 			return b;
 	}
 
-	public int calculateAbs(int a) {
+	public static int calculateAbs(int a) {
 		if (a < 0)
 			return a * (-1);
 		return a;
