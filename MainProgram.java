@@ -187,8 +187,8 @@ public class MainProgram {
 			}
 			else if(studentID == 1811424) {
 				System.out.println("[Student ID: 1811424]");
-				System.out.println("1. Calculate the Min Number");
-				System.out.Println("2. Calculate the Max Number");
+				System.out.println("1. Calculate the Max Number");
+				System.out.Println("2. Calculate the Min Number");
 
 				Scanner sc = new Scanner(System.in);
 
