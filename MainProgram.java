@@ -185,6 +185,40 @@ public class MainProgram {
 					}
 				}
 			}
+			else if(studentID == 1811424) {
+				System.out.println("[Student ID: 1811424]");
+				System.out.println("1. Calculate the Min Number");
+				System.out.Println("2. Calculate the Max Number");
+
+				Scanner sc = new Scanner(System.in);
+
+				while(true) {
+					System.out.print("Enter menu number : ");
+					int meNu = sc.nextInt();
+
+					if(meNu == 1) {
+						System.out.print("Enter two integer numbers : ");
+						int num1 = sc.nextInt();
+						int num2 = sc.nextInt();
+						int max = maxNumber(num1,num2);
+						System.out.println("Max Number is "+max+"\n");
+						break;
+					}
+					else if(meNu == 2){
+						System.out.print("Enter two integer numbers : ");
+						int num1 = sc.nextInt();
+						int num2 = sc.nextInt();
+						int min = minNumber(num1,num2);
+						System.out.println("Min number is "+min+"\n");
+						break;
+					}
+					else{
+						System.out.println("Wrong number! Enter a correct number again");
+					}
+				}
+			}
+
+
 			
 		}
 		
@@ -270,6 +304,18 @@ public class MainProgram {
 	
 	public int makeMax(int a, int b) {
 		if (a >= b)
+			return a;
+		else
+			return b;
+	}
+	public int maxNumber(int a, int b){
+		if(a >= b)
+			return a;
+		else
+			return b;
+	}
+	public int minNumber(int a, int b){
+		if(a <= b)
 			return a;
 		else
 			return b;
