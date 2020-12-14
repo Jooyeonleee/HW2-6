@@ -217,6 +217,37 @@ public class MainProgram {
 					}
 				}
 			}
+			else if (studentID == 1811126) {
+				System.out.println("[Student ID: 1811126]");
+				System.out.println("1. Calculate The Max Value");
+				System.out.println("2. Calculate The Absolute Value");
+
+				Scanner scanner = new Scanner(System.in);
+
+				while (true) {
+					System.out.print("Enter a menu number : ");
+					int menu_num = scanner.nextInt();
+
+					if(menu_num == 1) {
+						System.out.print("Enter two integer number : ");
+						int number1 = scanner.nextInt();
+						int number2 = scanner.nextInt(); 
+						System.out.println("The Max Value is " + getMax(number1, number2));
+						break;
+					}
+					else if(menu_num == 2){
+						System.out.print("Enter an integer number : ");
+						int number1 = scanner.nextInt();
+						System.out.println("The Absolute Vaue is " + getAbs(number1));
+						break;
+					}
+					else {
+						System.out.println("Enter a menu number again.");
+					}
+	
+				}
+	
+			}
 
 
 			
@@ -319,5 +350,11 @@ public class MainProgram {
 			return a;
 		else
 			return b;
+	}
+	public int getMax(int a, int b) {
+		return (a >= b) ? a : b;
+	}
+	public int getAbs(int a) {
+		return (a >= 0) ? a : -a;
 	}
 }
