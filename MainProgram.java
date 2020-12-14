@@ -351,10 +351,12 @@ public class MainProgram {
 		else
 			return b;
 	}
+
 	public int getMax(int a, int b) {
 		return (a >= b) ? a : b;
 	}
 	public int getAbs(int a) {
 		return (a >= 0) ? a : -a;
 	}
+	
 }
